@@ -408,6 +408,7 @@ func main() {
 		Registerer:      prometheus.DefaultRegisterer,
 		Gatherer:        prometheus.DefaultGatherer,
 		Context:         ctx,
+		ListenAddresses: []string{opts.BindAddr},
 		Storage:         proxyStorage,
 		LocalStorage:    ps,
 		ExemplarStorage: ps,
